@@ -1,0 +1,23 @@
+{
+    "name": "sicredi-bff",
+    "version": 2,
+    "env": {
+        "MONGODB_URI": "@mongo-db-uri"
+    },
+    "routes": [
+        {
+            "src": "/",
+            "dest": "/api/simulations.js"
+        },
+        {
+            "src": "/simulations",
+            "methods": ["POST", "GET"],
+            "dest": "/api/simulations.js"
+        },
+        {
+            "src": "/auth",
+            "methods": ["POST"],
+            "dest": "/api/auth.js"
+        }
+    ]
+}
