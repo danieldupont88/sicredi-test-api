@@ -2,7 +2,8 @@
     "name": "sicredi-bff",
     "version": 2,
     "env": {
-        "MONGODB_URI": "@mongo-db-uri"
+        "MONGODB_URI": "@mongo-db-uri",
+        "JWTSECRET": "@jwt-secret"
     },
     "routes": [
         {
