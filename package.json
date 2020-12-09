@@ -2,7 +2,7 @@
   "name": "sicredi-bff",
   "version": "1.0.0",
   "description": "API para o teste de desenvolvedor front end do Sicredi",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +12,7 @@
     "@vercel/node": "^1.8.3"
   },
   "dependencies": {
+    "class-validator": "^0.12.2",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.3"
   }

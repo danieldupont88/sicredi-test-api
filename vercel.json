@@ -7,17 +7,26 @@
     "routes": [
         {
             "src": "/",
-            "dest": "/api/simulations.js"
+            "dest": "/api/simulations.ts"
         },
         {
             "src": "/simulations",
             "methods": ["POST", "GET"],
-            "dest": "/api/simulations.js"
+            "dest": "/api/simulations.ts"
+        },
+        {   "src": "/simulations/(?<id>[^/]*)",
+            "methods": ["PUT", "GET"],
+            "dest": "/api/simulations.ts?id=$id"
+        },
+        {
+            "src": "/simulations/(.*)",
+            "methods": ["PUT", "GET"],
+            "dest": "/api/simulations.ts"
         },
         {
             "src": "/auth",
             "methods": ["POST"],
-            "dest": "/api/auth.js"
+            "dest": "/api/auth.ts"
         }
     ]
 }
