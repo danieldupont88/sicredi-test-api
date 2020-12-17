@@ -86,7 +86,7 @@ module.exports = async (req, res) => {
             const { id } = req.query;
             const { status }  = req.body;
             const updatedSimulation = await collection.findOneAndUpdate( { "_id": ObjectId(id) }, {$set: { status }});
-            res.json(updatedSimulation);
+            res.json(updatedSimulation.value);
         }
 
         if (req.method === 'DELETE') {
